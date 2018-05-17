@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package q.serviceB;
+
+option go_package = "saturn-sonic/test/pb/serviceB";
+
+message BarType {
+    string Bar = 1;
+}

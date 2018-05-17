@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "serviceB/b.proto";
+package q.serviceA;
+
+option go_package = "saturn-sonic/test/pb/serviceA";
+
+message HelloResponse {
+    serviceB.BarType bar = 1;
+}
+
+message HelloRequest {
+    string foo = 1;
+}

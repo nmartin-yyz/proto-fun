@@ -1,0 +1,18 @@
+protoc_version: 3.5.1
+
+protoc_include_wkt: true
+
+gen:
+  go_options:
+    # this makes go-micro import work...
+    import_path: saturn-sonic/test/tools/protos
+
+    # import_path: saturn-sonic/test/pb/
+
+  plugins:
+    - name:   go  
+      flags:  plugins=grpc
+      output: ../../../..
+    - name:   micro
+      type:   go
+      output: ../../pb
